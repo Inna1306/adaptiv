@@ -205,9 +205,7 @@ body {
 }
 
 .trend__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
     margin: 0 20px 20px 20px;
     padding-top: 38px;
     padding-right: 44px;
@@ -273,6 +271,10 @@ body {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
     width: 778px;
 }
 
@@ -825,8 +827,8 @@ form {
     background-repeat: no-repeat;
     background-position: center;
 
-    font-weight: 700;
-    font-family: "Open Sans";
+
+    font-family: "Open Sans-r";
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
@@ -852,58 +854,43 @@ form {
     margin-right: 30px;
 }
 
-.shop__item__wrap {
-    display: flex;
-    flex-direction: column;
-    width: calc((100% - 124px) / 3);
-    justify-content: space-between;
-
-}
 
 .shop__item {
-    width: 340px;
     position: relative;
     display: flex;
-    align-items: stretch;
-
-
+    justify-content: space-between;
+    flex-direction: column;
+    margin-right: 15px;
 }
 
 .image__shop {
-    width: calc((100% / 3) - 127px);
     z-index: -1;
     position: relative;
-    display: inline-block;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 65px;
 
 }
 
 .shop__frame {
     position: relative;
-    margin-top: 170px;
-    margin-left: 105px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
-    min-width: 340px;
+    max-width: 340px;
     border: 2px solid #b59f5b;
     align-items: flex-end;
-    padding: 50px 20px 10px 20px;
+    padding: 10px;
     z-index: 3;
 }
 
 .shop__title {
     margin: 20px 0px 0px 0px;
-    font-weight: 700;
+    font-family: "OpenSans-b";
     text-transform: uppercase;
     font-size: 20px;
 }
 
 .depiction {
-    margin: 5px 0px 20px 0px;
+    font-family: "OpenSans-r";
     font-size: 15px;
 }
 
@@ -922,12 +909,13 @@ form {
 
 .price__card {
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: space-between;
     align-items: center;
 }
 
 .old__price {
-    font-weight: 400;
+    font-family: "OpenSans-r";
     text-transform: uppercase;
     text-decoration: line-through;
     font-size: 14px;
@@ -939,7 +927,7 @@ form {
 }
 
 .new__price {
-    font-weight: 700;
+    font-family: "OpenSans-b";
     text-transform: uppercase;
     font-size: 20px;
     margin: 0px 0px 0px 0px;
@@ -952,7 +940,7 @@ form {
 .price__button {
     background-color: #b59f5b;
     border: none;
-    font-weight: 700;
+    font-family: "OpenSans-b";
     font-size: 14px;
     text-transform: uppercase;
     color: #ffffff;
@@ -960,7 +948,7 @@ form {
     cursor: pointer;
     padding: 15px 25px;
     z-index: 2;
-    margin-left: 105px;
+
 }
 
 .price__button:hover {
@@ -1073,7 +1061,7 @@ form {
     }
 
     .footer-wrapper {
-        width: 1200px;
+        max-width: 100%;
         margin: auto;
         padding: 0 15px 40px 15px;
     }
@@ -1162,13 +1150,12 @@ form {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        width: calc(50% - 12px);
+        width: 100%
     }
 
     .shop__frame {
         position: relative;
-        margin-top: 240px;
-        margin-left: 105px;
+
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
@@ -1179,7 +1166,7 @@ form {
     }
 
     .footer-wrapper {
-        width: 640px;
+        width: 100%;
         margin: auto;
         padding: 0 15px 40px 15px;
     }
