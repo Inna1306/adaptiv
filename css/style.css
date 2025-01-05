@@ -15,7 +15,7 @@
     font-family: OpenSans-b;
     src: url(../fonts/OpenSans-Bold.woff);
     font-weight: 700;
-    font-style: bold;
+    font-style: normal;
 }
 
 a {
@@ -207,12 +207,11 @@ body {
 .trend__content {
 
     margin: 0 20px 20px 20px;
-    padding-top: 38px;
-    padding-right: 44px;
-    padding-bottom: 30px;
-    padding-left: 22px;
+    padding: 38px 44px 30px 22px;
     border: 4px solid rgba(181, 159, 91, 0.5);
     z-index: 1;
+    font-family: OpenSans-b, sans-serif;
+    font-size: 20px;
 
 }
 
@@ -361,7 +360,7 @@ body {
 
 .new-name {
     margin-top: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-family: OpenSans-b, sans-serif;
     text-transform: uppercase;
     font-size: 14px;
@@ -382,7 +381,7 @@ body {
 
 .top {
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-family: OpenSans-b, sans-serif;
     text-transform: uppercase;
     font-size: 14px;
@@ -478,23 +477,25 @@ form {
     width: 48px;
     height: 48px;
     border: none;
-    background: #b59f5b;
     cursor: pointer;
     background-image: url("../svg/search.svg");
     background-repeat: no-repeat;
     background-size: 16px;
+    background-color: #b59f5b;
     background-position: center;
 }
 
+
 .search button:hover {
     background-color: #323232;
+    background-size: 16px;
 }
 
 .mailing-form input {
     font-size: 13px;
     line-height: 3;
     font-weight: 400;
-    font-family: "Open Sans";
+    font-family: "OpenSans-r", serif;
     width: 100%;
     height: 48px;
 
@@ -519,14 +520,12 @@ form {
     width: 100%;
     height: 48px;
     border: none;
-    background: #b59f5b;
     cursor: pointer;
 
-    background-repeat: no-repeat;
-    background-position: center;
+    background: #b59f5b no-repeat center;
 
     font-weight: 700;
-    font-family: "Open Sans";
+    font-family: "OpenSans-b", serif;
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
@@ -616,7 +615,7 @@ form {
 }
 
 .footer-wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 15px 40px 15px;
 }
@@ -730,7 +729,7 @@ form {
     background-color: #f4f7f6;
 
     font-size: 13px;
-    font-family: OpenSans-r, sans-serif;
+    font-family: OpenSans-r;
     color: #000;
     appearance: none;
     background-image: url(../svg/form-arrows.svg);
@@ -821,14 +820,12 @@ form {
     width: 100%;
     height: 48px;
     border: none;
-    background: #b59f5b;
     cursor: pointer;
 
-    background-repeat: no-repeat;
-    background-position: center;
+    background: #b59f5b no-repeat center;
 
 
-    font-family: "Open Sans-r";
+    font-family: "OpenSans-b";
     font-size: 14px;
     color: #ffffff;
     text-transform: uppercase;
@@ -843,35 +840,47 @@ form {
 
 .page__shop {
 
-    margin-top: 60px;
+    margin: auto;
+    max-width: 1200px;
     width: 100%;
+    padding: 0 15px;
 }
 
 .shop__items {
     display: flex;
     justify-content: space-between;
-    margin-left: 30px;
-    margin-right: 30px;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: auto;
 }
 
+.shop__item__wrap {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+}
 
 .shop__item {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    align-items: stretch;
     flex-direction: column;
-    margin-right: 15px;
+
 }
 
 .image__shop {
+
+    display: inline-block;
     z-index: -1;
     position: relative;
+    padding-left: 10px;
 
 }
 
 .shop__frame {
     position: relative;
-    margin-top: 10px;
+    margin-top: -33px;
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -883,14 +892,14 @@ form {
 }
 
 .shop__title {
-    margin: 20px 0px 0px 0px;
-    font-family: "OpenSans-b";
+    margin: 35px 0 0 0;
+    font-family: "OpenSans-b", serif;
     text-transform: uppercase;
     font-size: 20px;
 }
 
 .depiction {
-    font-family: "OpenSans-r";
+    font-family: "OpenSans-r", serif;
     font-size: 15px;
 }
 
@@ -915,7 +924,7 @@ form {
 }
 
 .old__price {
-    font-family: "OpenSans-r";
+    font-family: "OpenSans-r", serif;
     text-transform: uppercase;
     text-decoration: line-through;
     font-size: 14px;
@@ -927,10 +936,10 @@ form {
 }
 
 .new__price {
-    font-family: "OpenSans-b";
+    font-family: "OpenSans-b", serif;
     text-transform: uppercase;
     font-size: 20px;
-    margin: 0px 0px 0px 0px;
+    margin: 0 0 0 0;
 }
 
 .new__price:after {
@@ -940,7 +949,7 @@ form {
 .price__button {
     background-color: #b59f5b;
     border: none;
-    font-family: "OpenSans-b";
+    font-family: "OpenSans-b", serif;
     font-size: 14px;
     text-transform: uppercase;
     color: #ffffff;
@@ -1026,8 +1035,9 @@ form {
         justify-content: space-between;
     }
 
-    .main {
-        width: 778px;
+
+    .aside {
+        width: 40%;
     }
 
     .news {
@@ -1045,20 +1055,24 @@ form {
         flex-wrap: wrap;
     }
 
-
+    .shop__item__wrap {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
 
     .shop__frame {
         position: relative;
-        margin-top: 190px;
-        margin-left: 105px;
+        margin-top: -33px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
+        justify-content: center;
     }
 
-    .shop__item__wrap {
-        margin-bottom: 60px;
-    }
+
 
     .footer-wrapper {
         max-width: 100%;
@@ -1145,6 +1159,9 @@ form {
 
     }
 
+    .news-img {
+        width: 100%;
+    }
 
     .shop__items {
         display: flex;
@@ -1153,17 +1170,23 @@ form {
         width: 100%
     }
 
+    .shop__item__wrap {
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
     .shop__frame {
         position: relative;
+        margin-top: -33px;
 
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
     }
 
-    .shop__item__wrap {
-        margin-bottom: 60px;
-    }
+
 
     .footer-wrapper {
         width: 100%;
